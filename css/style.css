@@ -1,0 +1,642 @@
+/*  */
+
+.title__lines {
+  fill: #7ca400;
+}
+.title__lines.lines--below {
+  transform: rotate(180deg);
+}
+/* DONE********************* */
+/* **** HEADER **** */
+/* ********************* */
+.header {
+  grid-template-columns: 0.9fr 0.1fr;
+  position: fixed;
+  height: 8rem;
+  width: 100%;
+  padding: 0 4.8rem;
+  background-color: transparent;
+  z-index: 10000;
+}
+
+/**** .header__nav ****/
+.header__nav > ul {
+  gap: 4.8rem;
+  width: 100%;
+  height: 100%;
+}
+.header__nav > ul > li {
+  height: 100%;
+  padding: 0 1.6rem;
+}
+.header__nav > ul > li > a:link,
+.header__nav > ul > li > a:visited {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  line-height: 8rem;
+}
+/* .logo-item */
+.logo-item {
+  position: relative;
+  width: 15%;
+}
+.logo-item figure {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.logo-item img {
+  display: inline-block;
+  width: 100%;
+}
+/* li hover effect */
+.header__nav > ul > li > a:link {
+  position: relative;
+}
+.header__nav > ul > li > a:link::before,
+.header__nav > ul > li > a:link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  background: url(../img/nav-hover-effect.svg) no-repeat;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.logo-item > a::before,
+.logo-item > a::after {
+  display: none;
+}
+
+.header__nav > ul > li > a:link::before {
+  left: 0%;
+  transform: rotate(-90deg) translate(50%, -50%);
+}
+.header__nav > ul > li > a:link::after {
+  right: 0%;
+  transform: rotate(90deg) translate(-50%, -50%);
+}
+.header__nav > ul > li:hover > a:link::after,
+.header__nav > ul > li:hover > a:link::before {
+  opacity: 1;
+}
+
+/**** .header__socials ****/
+.header__socials {
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+.header__socials > li > a:link,
+.header__socials > li > a:visited {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* DONE********************* */
+/* **** HERO SECTION **** */
+/* ********************* */
+.section-hero {
+  background: url('../img/background_dark.jpg');
+  padding-top: 12.8rem;
+  width: 100%;
+}
+.section-hero .container {
+  gap: 4.8rem;
+}
+
+/**** .hero__text-box ****/
+.hero__text-box {
+  align-self: center;
+}
+.hero__text-box h1 {
+  text-transform: uppercase;
+  font-size: 6.2rem;
+  font-weight: 400;
+  transform: rotate(-2deg);
+}
+.h1--w-bg {
+  position: relative;
+}
+.h1--w-bg .highlight svg {
+  height: 90%;
+}
+.h1--w-bg strong {
+  font-weight: 400;
+  font-size: 7.4rem;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/**** .hero__image-box ****/
+.hero__image-box figure {
+  justify-content: flex-end;
+}
+.hero__image-box img {
+  text-align: right;
+  animation: forkSwing 4s infinite alternate
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes forkSwing {
+  0% {
+    transform: rotate(9deg);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* .bg {
+  margin: 0 auto;
+  background: url(../img/steeeeeack-cooking_low.png) no-repeat;
+  background-position: 0 0;
+  width: 1711px;
+  height: 1200px;
+  animation: burgerFlip 4s infinite forwards;
+  animation-timing-function: steps(11);
+/* } */
+/* 
+@keyframes burgerFlip {
+  100% {
+    background-position: -18727px 0px;
+  }
+}  */
+
+/* DONE********************* */
+/* **** ABOUT SECTION **** */
+/* ********************* */
+.section-about {
+  position: relative;
+  padding: 9.6rem 0;
+  background: url('../img/background_light.jpeg');
+}
+
+.section-about .container {
+  max-width: 100rem;
+  column-gap: 3.2rem;
+}
+
+/**** .about__col ****/
+.about__col {
+  gap: 3.2rem;
+}
+
+.about__col img {
+  width: 6rem;
+  height: 6rem;
+  vertical-align: top;
+}
+
+.about__col p {
+  text-transform: uppercase;
+  font-size: 4.8rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1;
+  transform: skewX(5deg) rotate(-0.5deg);
+}
+.about__col p strong {
+  font-size: 6.2rem;
+}
+
+/* DONE********************* */
+/* **** PRODUCTS SECTION **** */
+/* ********************* */
+.section-products {
+  background: url('../img/background_light.jpeg');
+  padding: 9.6rem 0;
+  width: 100%;
+  position: relative;
+}
+.section-about::before,
+.section-recipes::before {
+  content: '';
+  background-image: url(../img/asset\ 19.webp);
+  background-position: 50% 95%;
+  width: 100%;
+  position: absolute;
+  top: -10%;
+  transform: rotate(-180deg);
+  height: 9.6rem;
+}
+.section-products::after {
+  content: '';
+  background-image: url(../img/asset\ 19.webp);
+  background-position: 50% 95%;
+  width: 100%;
+  position: absolute;
+  bottom: -5%;
+  /* transform: rotate(-180deg); */
+  height: 9.6rem;
+  z-index: 3;
+}
+
+.products {
+  height: 70rem;
+  width: 100%;
+  align-items: center;
+  overflow: visible;
+}
+
+.product {
+  max-width: 35rem;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.product:hover {
+  transform: translateY(-12%);
+}
+
+/* .product__bg, .description__bg */
+.product__bg,
+.description__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.product__bg > svg,
+.description__bg > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.product__bg > svg {
+  fill: #ddc7ad;
+}
+.description__bg > svg {
+  fill: #e5d5c2;
+}
+
+/**** .product__image-box ****/
+.product__image-box {
+  position: relative;
+  z-index: 1;
+}
+/* Prevent the height of it collapsing */
+.product__image-box::before {
+  content: '';
+  display: block;
+  padding-top: 50%;
+}
+.product__image-box figure {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, 25px) rotate(0deg);
+}
+.product__image-box .caption {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  transform: rotate(-27deg);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.36, 0.33, 0, 1);
+}
+.product:hover .product__image-box .caption {
+  opacity: 1;
+  left: 10%;
+  top: 60%;
+}
+
+.product__image-box figure img {
+  display: block;
+  max-width: 100%;
+  transition: all 0.4s;
+}
+.product:hover .product__image-box figure img {
+  transform: translate(10%, -2%);
+}
+
+/**** .product__description-box ****/
+.product__description-box {
+  position: relative;
+  z-index: 2;
+}
+
+.description__text {
+  position: relative;
+  z-index: 2;
+  padding: 3.2rem;
+}
+
+.product__description-box h3 {
+  font-size: 3.2em;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.description__text .p-hidden {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.36, 0.33, 0, 1);
+}
+.description__text .p-hidden p {
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.product:hover .description__text .p-hidden p {
+  opacity: 1;
+}
+.product:hover .description__text .p-hidden {
+  height: 9rem;
+}
+
+.product__cta {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.product__cta .cta {
+  position: relative;
+}
+.product__cta .cta a:link,
+.product__cta .cta a:visited {
+  z-index: 12;
+  color: #fff;
+  display: inline-block;
+}
+.product__cta .cta svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.product__cta .cta svg:last-of-type {
+  fill: #030508;
+  width: 0%;
+}
+.product__cta .cta:hover svg:last-of-type {
+  width: 100%;
+}
+.product__cta .cta svg:first-of-type {
+  width: 100%;
+  fill: #e71d84;
+}
+
+/* DONE********************* */
+/* **** VIDEO SECTION **** */
+/* ********************* */
+.section-video {
+  position: relative;
+  height: 100vh;
+}
+.section-video video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+}
+
+/* DONE********************* */
+/* **** RECIPES SECTION **** */
+/* ********************* */
+.section-recipes {
+  background: url('../img/background_light.jpeg');
+  position: relative;
+  padding: 9.6rem 0;
+}
+
+.recipes {
+  margin-top: 4.8rem;
+  justify-content: space-evenly;
+  column-gap: 2rem;
+  max-width: 110rem;
+}
+
+.recipe {
+  transition: all 0.5s;
+  opacity: 1;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 1px 10px 3px rgba(34, 34, 34, 0.226);
+}
+
+.recipe img {
+  width: 100%;
+  border-radius: 25px;
+}
+.recipe p {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  text-align: center;
+  padding: 3rem;
+}
+.recipe .recipe__cta {
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.recipe .gotoRecipe {
+  color: #7ca400;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.tag {
+  position: relative;
+  z-index: 2;
+}
+.tag .tag-text span {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  z-index: 2;
+  position: relative;
+  font-weight: 500;
+  color: #fff;
+}
+
+.recipe:hover {
+  transform: scale(1.05) rotate(0.5deg) translateY(-20px) !important;
+  opacity: 1 !important;
+  box-shadow: 0 1px 50px 3px rgba(34, 34, 34, 0.158);
+}
+.recipe:hover .gotoRecipe {
+  opacity: 0;
+}
+
+.recipe .recipe__cta::before {
+  content: '';
+  position: absolute;
+  background-image: url('../img/recipes/arrow.svg');
+  width: 4rem;
+  height: 4rem;
+  bottom: -50%;
+  right: 10%;
+  background-size: cover;
+  transform: rotateY(360deg) rotateX(180deg);
+  opacity: 0;
+  transition: all 0.4s;
+}
+.recipe:hover .recipe__cta::before {
+  opacity: 1;
+}
+.recipes:hover .recipe {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+/* DONE********************* */
+/* **** TRY SECTION **** */
+/* ********************* */
+.section-try {
+  padding: 9.6rem 0;
+  background: url('../img/background_light.jpeg');
+}
+.section-try .container {
+  gap: 4rem;
+}
+.section-try p {
+  font-size: 2rem;
+}
+
+.try__cta a {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.36, 0.33, 0, 1);
+}
+.try__cta a::after {
+  content: 'where to taste accro';
+  transform: translateY(100%);
+  color: #030508;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 1.6rem 3.2rem;
+  transition: all 0.4s;
+}
+
+.try__cta {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.try__cta svg {
+  top: 0;
+  width: 100%;
+  fill: #e71d84;
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  transition: all 0.3s;
+}
+
+.try__cta:hover a {
+  transform: translateY(-100%);
+}
+.try__cta:hover {
+  transform: rotate(-2deg) scale(1.1);
+}
+
+/* DONE********************* */
+/* **** QA SECTION **** */
+/* ********************* */
+.section-qa {
+  padding: 9.6rem 0;
+  background: url('../img/background_light.jpeg');
+  position: relative;
+}
+
+.section-qa header {
+  position: sticky;
+  top: 15%;
+  left: 0;
+  align-self: start;
+}
+
+.section-qa .container {
+  gap: 4.8rem;
+}
+
+.qas {
+  gap: 4.8rem;
+}
+
+.section-qa h3 {
+  text-align: left;
+  color: #7ca400;
+}
+.section-qa h3 img {
+  margin-right: 2rem;
+}
+
+.qas h3 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.qas p {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.qas ul {
+  list-style: disc;
+  font-size: 2.4rem;
+  padding-left: 2rem;
+}
+.qas ul li {
+  margin-bottom: 1.2rem;
+}
+
+/* DONE********************* */
+/* **** FOOTER **** */
+/* ********************* */
+.footer {
+  position: relative;
+  padding: 9.6rem 0;
+}
+
+.footer header {
+  margin-bottom: 4rem;
+}
+
+.footer ul {
+  gap: 3rem;
+}
+.footer ul li:hover {
+  transform: rotate(2deg);
+}
+
+.footer__bg {
+  background-image: url(../img/background_kraft.webp);
+  background-position: 50% 95%;
+  transform: rotate(-180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
